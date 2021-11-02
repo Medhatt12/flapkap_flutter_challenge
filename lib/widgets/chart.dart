@@ -5,7 +5,7 @@ import './chart_bar.dart';
 import '../providers/order.dart';
 
 class Chart extends StatelessWidget {
-  //final List<Orders> recentTransactions;
+  
   List<Order> loadedDate = Orders().getOrders;
 
   Chart(this.loadedDate);
@@ -13,7 +13,7 @@ class Chart extends StatelessWidget {
   List<Map<String, Object>> get groupedTransactionValues {
     return List.generate(12, (index) {
       final date = DateTime.now();
-      final month = new DateTime(date.day,date.month-index,date.year);
+      final month = DateTime(date.day,date.month-index,date.year);
       double totalSum = 0.0;
       //print(loadedDate.length.toString());
 
@@ -40,9 +40,9 @@ class Chart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
           elevation: 6,
-          margin: EdgeInsets.all(20),
+          margin:  const EdgeInsets.all(20),
           child: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: groupedTransactionValues.map((data) {
