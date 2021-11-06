@@ -32,7 +32,7 @@ class Chart extends StatelessWidget {
        }
        months[monthIndex-1]=months[monthIndex-1] +1;
       }
-      print(months);
+      //print(months);
 
       return List.generate(12, (index) {
         final date = DateTime.now();
