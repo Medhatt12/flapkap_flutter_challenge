@@ -133,7 +133,7 @@ class _ShowOrdersState extends State<ShowOrders> {
       child: Container(
         decoration: BoxDecoration(
           border: Border.all(color: Colors.teal,width: 2),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(30),
           color: Colors.white
         ),
        // color: Colors.white,

@@ -33,35 +33,60 @@ class Analytics extends StatelessWidget {
       mainAxisSpacing: 20,
       padding: const EdgeInsets.all(25),
       children: <Widget>[
-        Card(
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Colors.teal,width: 2),
+            borderRadius: BorderRadius.circular(30)
+          ),
           child: AnalyticsCard(
               context,
               Icons.add_shopping_cart_rounded,
               'Total Sales Made',
               orderData.totalNumberOfSales.toString() + ' Sales'),
         ),
-        Card(
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Colors.teal,width: 2),
+            borderRadius: BorderRadius.circular(30)
+          ),
           child: AnalyticsCard(
               context,
               Icons.warning_amber_rounded,
               'Total Returns',
               orderData.numberOfReturns.toString() + ' Returns'),
         ),
-        Card(
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Colors.teal,width: 2),
+            borderRadius: BorderRadius.circular(30)
+          ),
           child: AnalyticsCard(
               context,
               Icons.monetization_on_rounded,
               'Average Price Per Sale',
               orderData.averagePrice.toStringAsFixed(2) + ' dollars'),
         ),
-        Card(
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Colors.teal,width: 2),
+            borderRadius: BorderRadius.circular(30)
+          ),
           child: AnalyticsCard(
               context,
               Icons.money_rounded,
               'Delivered Orders Total Sales',
               orderData.deliveredOrdersSales.toStringAsFixed(2) + ' dollars'),
         ),
-        Card(
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Colors.teal,width: 2),
+            borderRadius: BorderRadius.circular(30)
+          ),
           child: AnalyticsCard(
               context,
               Icons.airport_shuttle_rounded,

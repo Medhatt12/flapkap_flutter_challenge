@@ -105,6 +105,18 @@ class Orders with ChangeNotifier {
     return sum/totalNumberOfSales;
   }
 
+  
+
+  List<Order> get returnedGetter{
+    List<Order> returnedOrders=[];
+    for (var element in _orders) {
+      if(element.status == 'RETURNED'){
+        returnedOrders.add(element);
+      }
+    }
+    return returnedOrders;
+  }
+
   double get deliveredOrdersSales{
     double sales=0;
     for (var element in _orders) {
