@@ -1,7 +1,7 @@
-import '../widgets/analytics_widget.dart';
-import '../widgets/show_orders_widget.dart';
+import '../screen widgets/analytics_widget.dart';
+import '../screen widgets/show_orders_widget.dart';
 
-import '../widgets/graph_widget.dart';
+import '../screen widgets/graph_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

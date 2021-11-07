@@ -17,13 +17,6 @@ class Chart extends StatelessWidget {
     for(int i=0;i<12;i++){
       months[i]=0;
     }
-    //int sum =0;
-
-
-      // for(int i=0; i<12;i++){
-      //   Map<int,int> map={i:0};
-      //   months.add(map);
-      // }
 
       for(int x=0;x<loadedDate.length;x++){
        var monthIndex = loadedDate[x].registeredDate.month;
@@ -32,8 +25,6 @@ class Chart extends StatelessWidget {
        }
        months[monthIndex-1]=months[monthIndex-1] +1;
       }
-      //print(months);
-
       return List.generate(12, (index) {
         final date = DateTime.now();
         final month = DateTime(date.day,index+1,date.year);
@@ -43,41 +34,7 @@ class Chart extends StatelessWidget {
         'amount': months[index],
       };
       }).toList();
-
-      // return months.map((val,index) => {
-      //   'month': DateFormat.MMMM().format(index).substring(0, 3),
-      //   'amount': totalSum,
-      // });
-
-    //return List.generate(12, (index) {
-      
-      
-      // const firstMonth = 6;
-      // final date = DateTime.now();
-
-      // final month = DateTime(date.day,firstMonth-index,date.year);
-      // double totalSum = 0.0;
-      // print(index);
-      // //print(loadedDate.length.toString());
-
-      // for (var i = 0; i < loadedDate.length; i++) {
-      //   if (loadedDate[i].registeredDate.month == month.month) {
-      //     totalSum += 1;
-      //   }
-      // }
-
-      // return {
-      //   'month': DateFormat.MMMM().format(month).substring(0, 3),
-      //   'amount': totalSum,
-      // };
-   // }).reversed.toList();
   }
-
-
-
-  // List<Map<String,Object>> sortMonths(List<Map<String, Object>> unsorted){
-  //   List<Map<String,Object>> sorted;
-  // }
 
   double get totalSpending {
     return groupedTransactionValues.fold(0.0, (sum, item) {
